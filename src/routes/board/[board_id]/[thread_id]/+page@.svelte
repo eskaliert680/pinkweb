@@ -90,7 +90,7 @@
                 <p>{data.thread.content}</p>
             </div>
             {#each data.posts as post}
-                <div class="post my-5 p-2 w-fit">
+                <div class="post my-5 p-2 w-fit" id="{post.id}">
                     <div class="dropdown absolute float-end">
                         <span>...</span>
                         <div class="dropdown-content w-fit">

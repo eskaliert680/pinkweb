@@ -64,12 +64,12 @@
                             <tr class="odd:tr-odd" style="max-width:100%;">
                                 <td
                                     ><a href="/board/{post.parent_thread_board}/"
-                                        >/{post.parent_thread_board}/</a
+                                        >/{post.parent_thread_board}</a
                                     ></td
                                 >
                                 <td
                                     ><a
-                                        href="/board/{post.parent_thread_board}/{post.parent_thread_id}/"
+                                        href="/board/{post.parent_thread_board}/{post.parent_thread_id}#{post.id}/"
                                         >No. {post.parent_thread_id}</a
                                     ></td
                                 >
