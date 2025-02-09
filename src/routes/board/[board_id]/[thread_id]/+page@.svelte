@@ -38,7 +38,12 @@
                     class="w-full mb-2"
                 />
                 <br />
-                <input type="file" class="mb-2" name="image-content" accept="image/*" />
+                <input
+                    type="file"
+                    class="mb-2"
+                    name="image-content"
+                    accept="image/*"
+                />
                 <br />
                 <button class="btn" type="submit">Reply</button>
             </form>
@@ -105,7 +110,8 @@
                     <p>
                         <span class="text-sm"
                             ><a
-                                href="{data.board_abbr}/{data.thread.id}#{post.id}"
+                                href="{data.board_abbr}/{data.thread
+                                    .id}#{post.id}"
                                 >No. {data.thread.id}/{post.id}</a
                             ></span
                         >
@@ -118,12 +124,22 @@
 
                     <p class="text-xs">{post.inserted_at}</p>
 
-                    {#if data.thread.image_url === ""}
-                    <img
-                        src={post.image_url}
-                        class="post-image"
-                        alt="Image for post created by '{post.gtripcode}'"
-                    />
+                    {#if data.thread.image_url}
+                        {#if post.gtripcode === ""}
+                            <img
+                                src={post.image_url}
+                                class="post-image"
+                                alt="Post created by anonymous"
+                            />
+                        {:else}
+                            <img
+                                src={post.image_url}
+                                class="post-image"
+                                alt="Post created by '{post.gtripcode}'"
+                            />
+                        {/if}
+
+                        
                     {/if}
                     <p>{post.content}</p>
                 </div>

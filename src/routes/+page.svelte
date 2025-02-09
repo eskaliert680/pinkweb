@@ -10,7 +10,8 @@
 
 <div class="flex h-screen">
     <div class="container container-sm m-auto px-10 sm:p-5 text-center">
-        <h1 class="text-3xl">{data.global_name}</h1>
+
+        <img src={"/qdf.png"} class="mx-auto logo" alt="Queer Defense Front logo">
         <p>{data.global_description}</p>
         <table class="table-fixed mb-2 border-spacing-x-5 w-full mt-2">
             <thead>
@@ -101,7 +102,7 @@
                                         >/{thread.board}/</a
                                     ></td
                                 >
-                                <td>{thread.title}</td>
+                                <td><a href="/board/{thread.board}/{thread.id}">{thread.title}</a></td>
                                 <td><p>{thread.content}</p></td>
                                 {#if thread.gtripcode == null}
                                     <td>{thread.gtripcode}</td>

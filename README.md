@@ -89,6 +89,7 @@ create table posts (
   inserted_at timestamp with time zone default timezone ('utc'::text, now()) not null,
   content text not null,
   image_url text not null,
+  gtripcode text null,
   parent_thread_id text not null,
   parent_thread_board text not null
 );
