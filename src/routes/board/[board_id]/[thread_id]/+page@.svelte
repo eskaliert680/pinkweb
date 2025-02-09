@@ -68,7 +68,7 @@
                 </div>
                 <p>
                     <span class="text-sm"
-                        ><a href="{data.board_abbr}/{data.thread.id}/"
+                        ><a href="/board/{data.thread.board}/{data.thread.id}/"
                             >No. {data.thread.id}</a
                         ></span
                     >
@@ -91,11 +91,12 @@
             </div>
             {#each data.posts as post}
                 <div class="post my-5 p-2 w-fit" id="{post.id}">
+                    <input type="checkbox" class="dropdown absolute float-end" id="demo"/>
                     <div class="dropdown absolute float-end">
                         <span>...</span>
                         <div class="dropdown-content w-fit">
                             <form
-                                action="/reply-delete?id={data.thread.id}"
+                                action="/reply-delete?id={post.id}"
                                 method="POST"
                             >
                                 <input
